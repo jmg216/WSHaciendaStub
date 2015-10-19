@@ -1,0 +1,114 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from DocumentoFirmaDigitalService WSDL service -->
+
+  <service name="DocumentoFirmaDigitalEndPointPort" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://doc.digital.hacienda.gov.py/"/>
+      <parameter name="wsdlServiceElement" value="DocumentoFirmaDigitalService"/>
+      <parameter name="schemaUnqualified" value="http://doc.digital.hacienda.gov.py/"/>
+      <parameter name="wsdlServicePort" value="DocumentoFirmaDigitalEndPointPort"/>
+      <parameter name="className" value="py.gov.hacienda.digital.doc.DocumentoFirmaDigitalServiceSoapBindingSkeleton"/>
+      <parameter name="wsdlPortType" value="DocumentoFirmaDigitalEndPoint"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:obtenerPdfParaValidar"
+        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaValidar"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:resultOperacion"
+        type="java:py.gov.hacienda.digital.doc.ResultOperacion"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:obtenerPdfParaValidarResponse"
+        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaValidarResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:campoTipoValor"
+        type="java:py.gov.hacienda.digital.doc.CampoTipoValor"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:obtenerPdfParaFirmaResponse"
+        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaFirmaResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:WsException"
+        type="java:py.gov.hacienda.digital.doc.WsException"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:guardarPdfFirmadoResponse"
+        type="java:py.gov.hacienda.digital.doc.GuardarPdfFirmadoResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:obtenerPdfParaFirma"
+        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaFirma"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:tipoDato"
+        type="java:py.gov.hacienda.digital.doc.TipoDato"
+        serializer="org.apache.axis.encoding.ser.EnumSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:guardarPdfFirmado"
+        type="java:py.gov.hacienda.digital.doc.GuardarPdfFirmado"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:documentoElectronico"
+        type="java:py.gov.hacienda.digital.doc.DocumentoElectronico"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
