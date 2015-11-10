@@ -24,8 +24,8 @@
 
       <typeMapping
         xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:obtenerPdfParaValidar"
-        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaValidar"
+        qname="ns:WsException"
+        type="java:py.gov.hacienda.digital.doc.WsException"
         serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
         deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
         encodingStyle=""
@@ -40,64 +40,8 @@
       />
       <typeMapping
         xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:obtenerPdfParaValidarResponse"
-        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaValidarResponse"
-        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
         qname="ns:campoTipoValor"
         type="java:py.gov.hacienda.digital.doc.CampoTipoValor"
-        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:obtenerPdfParaFirmaResponse"
-        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaFirmaResponse"
-        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:WsException"
-        type="java:py.gov.hacienda.digital.doc.WsException"
-        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:guardarPdfFirmadoResponse"
-        type="java:py.gov.hacienda.digital.doc.GuardarPdfFirmadoResponse"
-        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:obtenerPdfParaFirma"
-        type="java:py.gov.hacienda.digital.doc.ObtenerPdfParaFirma"
-        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:tipoDato"
-        type="java:py.gov.hacienda.digital.doc.TipoDato"
-        serializer="org.apache.axis.encoding.ser.EnumSerializerFactory"
-        deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory"
-        encodingStyle=""
-      />
-      <typeMapping
-        xmlns:ns="http://doc.digital.hacienda.gov.py/"
-        qname="ns:guardarPdfFirmado"
-        type="java:py.gov.hacienda.digital.doc.GuardarPdfFirmado"
         serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
         deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
         encodingStyle=""
@@ -108,6 +52,14 @@
         type="java:py.gov.hacienda.digital.doc.DocumentoElectronico"
         serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
         deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://doc.digital.hacienda.gov.py/"
+        qname="ns:tipoDato"
+        type="java:py.gov.hacienda.digital.doc.TipoDato"
+        serializer="org.apache.axis.encoding.ser.EnumSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.EnumDeserializerFactory"
         encodingStyle=""
       />
   </service>

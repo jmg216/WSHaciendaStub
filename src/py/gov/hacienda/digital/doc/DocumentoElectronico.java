@@ -10,7 +10,7 @@ package py.gov.hacienda.digital.doc;
 public class DocumentoElectronico  implements java.io.Serializable {
     private byte[] objetoPdf;
 
-    private java.lang.Object[] parametros;
+    private py.gov.hacienda.digital.doc.CampoTipoValor[] parametros;
 
     private java.lang.String tipoDocumento;
 
@@ -19,7 +19,7 @@ public class DocumentoElectronico  implements java.io.Serializable {
 
     public DocumentoElectronico(
            byte[] objetoPdf,
-           java.lang.Object[] parametros,
+           py.gov.hacienda.digital.doc.CampoTipoValor[] parametros,
            java.lang.String tipoDocumento) {
            this.objetoPdf = objetoPdf;
            this.parametros = parametros;
@@ -52,7 +52,7 @@ public class DocumentoElectronico  implements java.io.Serializable {
      * 
      * @return parametros
      */
-    public java.lang.Object[] getParametros() {
+    public py.gov.hacienda.digital.doc.CampoTipoValor[] getParametros() {
         return parametros;
     }
 
@@ -62,15 +62,15 @@ public class DocumentoElectronico  implements java.io.Serializable {
      * 
      * @param parametros
      */
-    public void setParametros(java.lang.Object[] parametros) {
+    public void setParametros(py.gov.hacienda.digital.doc.CampoTipoValor[] parametros) {
         this.parametros = parametros;
     }
 
-    public java.lang.Object getParametros(int i) {
+    public py.gov.hacienda.digital.doc.CampoTipoValor getParametros(int i) {
         return this.parametros[i];
     }
 
-    public void setParametros(int i, java.lang.Object _value) {
+    public void setParametros(int i, py.gov.hacienda.digital.doc.CampoTipoValor _value) {
         this.parametros[i] = _value;
     }
 
@@ -170,7 +170,7 @@ public class DocumentoElectronico  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("parametros");
         elemField.setXmlName(new javax.xml.namespace.QName("", "parametros"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "campoTipoValor"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);

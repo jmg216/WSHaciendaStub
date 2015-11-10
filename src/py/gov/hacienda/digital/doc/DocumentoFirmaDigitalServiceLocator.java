@@ -22,7 +22,7 @@ public class DocumentoFirmaDigitalServiceLocator extends org.apache.axis.client.
     }
 
     // Use to get a proxy class for DocumentoFirmaDigitalEndPointPort
-    private java.lang.String DocumentoFirmaDigitalEndPointPort_address = "http://localhost:8080/doc/objetoPdfService";
+    private java.lang.String DocumentoFirmaDigitalEndPointPort_address = "http://10.20.0.3:6060/doc/objetoPdfService";
 
     public java.lang.String getDocumentoFirmaDigitalEndPointPortAddress() {
         return DocumentoFirmaDigitalEndPointPort_address;

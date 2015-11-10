@@ -33,6 +33,7 @@ public class DocumentoFirmaDigitalServiceSoapBindingSkeleton implements py.gov.h
         _params = new org.apache.axis.description.ParameterDesc [] {
             new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "postFirmado"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "documentoElectronico"), py.gov.hacienda.digital.doc.DocumentoElectronico.class, false, false), 
             new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "cedulaFirmante"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false), 
+            new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "fechaFirmaCliente"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"), java.util.Calendar.class, false, false), 
         };
         _oper = new org.apache.axis.description.OperationDesc("guardarPdfFirmado", _params, new javax.xml.namespace.QName("", "resultPdfFirmado"));
         _oper.setReturnType(new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "resultOperacion"));
@@ -49,6 +50,17 @@ public class DocumentoFirmaDigitalServiceSoapBindingSkeleton implements py.gov.h
         _fault.setClassName("py.gov.hacienda.digital.doc.WsException");
         _fault.setXmlType(new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "WsException"));
         _oper.addFault(_fault);
+        _params = new org.apache.axis.description.ParameterDesc [] {
+            new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "documentoElectronico"), py.gov.hacienda.digital.doc.DocumentoElectronico.class, false, false), 
+        };
+        _oper = new org.apache.axis.description.OperationDesc("quitarReserva", _params, null);
+        _oper.setElementQName(new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "quitarReserva"));
+        _oper.setSoapAction("");
+        _myOperationsList.add(_oper);
+        if (_myOperations.get("quitarReserva") == null) {
+            _myOperations.put("quitarReserva", new java.util.ArrayList());
+        }
+        ((java.util.List)_myOperations.get("quitarReserva")).add(_oper);
         _params = new org.apache.axis.description.ParameterDesc [] {
             new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "tipoDocumento"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false), 
             new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "listaParametros"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://doc.digital.hacienda.gov.py/", "campoTipoValor"), py.gov.hacienda.digital.doc.CampoTipoValor[].class, false, false), 
@@ -97,10 +109,15 @@ public class DocumentoFirmaDigitalServiceSoapBindingSkeleton implements py.gov.h
     public DocumentoFirmaDigitalServiceSoapBindingSkeleton(py.gov.hacienda.digital.doc.DocumentoFirmaDigitalEndPoint impl) {
         this.impl = impl;
     }
-    public py.gov.hacienda.digital.doc.ResultOperacion guardarPdfFirmado(py.gov.hacienda.digital.doc.DocumentoElectronico postFirmado, java.lang.String cedulaFirmante) throws java.rmi.RemoteException, py.gov.hacienda.digital.doc.WsException
+    public py.gov.hacienda.digital.doc.ResultOperacion guardarPdfFirmado(py.gov.hacienda.digital.doc.DocumentoElectronico postFirmado, java.lang.String cedulaFirmante, java.util.Calendar fechaFirmaCliente) throws java.rmi.RemoteException, py.gov.hacienda.digital.doc.WsException
     {
-        py.gov.hacienda.digital.doc.ResultOperacion ret = impl.guardarPdfFirmado(postFirmado, cedulaFirmante);
+        py.gov.hacienda.digital.doc.ResultOperacion ret = impl.guardarPdfFirmado(postFirmado, cedulaFirmante, fechaFirmaCliente);
         return ret;
+    }
+
+    public void quitarReserva(py.gov.hacienda.digital.doc.DocumentoElectronico arg0) throws java.rmi.RemoteException
+    {
+        impl.quitarReserva(arg0);
     }
 
     public py.gov.hacienda.digital.doc.DocumentoElectronico obtenerPdfParaValidar(java.lang.String tipoDocumento, py.gov.hacienda.digital.doc.CampoTipoValor[] listaParametros) throws java.rmi.RemoteException, py.gov.hacienda.digital.doc.WsException
